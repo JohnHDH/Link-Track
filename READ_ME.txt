@@ -53,6 +53,7 @@ Table of Contents
 ::      Upload the content of /html/                              ::
 ::      Update the MySQL database connection information in...    ::
 ::      track.php & /track/index.php                              ::
+::      Edit /track/create.php on line 71 with your domain        ::
 ::                                                                ::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
