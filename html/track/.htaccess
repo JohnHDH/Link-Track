@@ -1,0 +1,4 @@
+AuthName "track"
+AuthUserFile "/home/hdhlink/.htpasswds/public_html/track/passwd"
+AuthType Basic
+require valid-user

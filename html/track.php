@@ -2,9 +2,9 @@
 
 //Connect to the database
 
-mysql_connect("localhost", "user", "password") or die(mysql_error());
+mysql_connect("localhost", "db user", "password") or die(mysql_error());
 
-mysql_select_db("table") or die(mysql_error());
+mysql_select_db("database") or die(mysql_error());
 
 //Grab the destination page from the link
 $redirect = mysql_real_escape_string($_GET['page']);

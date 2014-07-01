@@ -50,42 +50,26 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Statistics
+            <h1>Create
 			<br />
-			<small>View stats of our links</small></h1>
+			<small>Create a new link</small></h1>
           </div>
         </div><!-- /.row -->
 		<br />
 		<br />
 		<br />
 		<center>
+		<p>Enter the url as: http://harddrivehotel.com</p>
+		<br />
+		<form method="post" action="">
+    <input type="text" name="link" value="<?= isset($_POST['link']) ? htmlspecialchars($_POST['something']) : '' ?>" />
+    <input type="submit" name="submit" class="btn btn-default"/>
+  </form>
+
 <?php
-$con=mysqli_connect("localhost","user","pass","db name");
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+if(isset($_POST['submit'])) {
+  echo 'http://www.hdh.link/track.php?page=', htmlspecialchars($_POST['link']);
 }
-
-$result = mysqli_query($con,"SELECT * FROM tracking_table");
-
-echo "<table border='1'>
-<tr>
-<th>UID</th>
-<th>Page</th>
-<th>Time Stamp</th>
-</tr>";
-
-while($row = mysqli_fetch_array($result)) {
-  echo "<tr>";
-  echo "<td>" . $row['recid'] . "</td>";
-  echo "<td>" . $row['rec_use_page'] . "</td>";
-  echo "<td>" . $row['rec_use_date'] . "</td>";
-  echo "</tr>";
-}
-
-echo "</table>";
-
-mysqli_close($con);
 ?>
 </center>
       </div><!-- /#page-wrapper -->
