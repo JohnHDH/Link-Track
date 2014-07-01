@@ -68,7 +68,7 @@
 
 <?php
 if(isset($_POST['submit'])) {
-  echo 'http://www.hdh.link/track.php?page=', htmlspecialchars($_POST['link']);
+  echo 'http://www.YOURDOMAIN.com/track.php?page=', htmlspecialchars($_POST['link']);
 }
 ?>
 </center>
